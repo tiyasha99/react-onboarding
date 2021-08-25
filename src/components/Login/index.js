@@ -5,7 +5,8 @@ import { LoginCard, LoginContainer,FormH1,FormButton, FormInput, FormLabel,FormB
 
 
 const LoginOTP = () => {
-  
+ const [value,setValue]=useState("");
+ 
   
 
   return (
@@ -19,15 +20,17 @@ const LoginOTP = () => {
         <FormLabel>Phone</FormLabel>
         <PhoneInput
         country={'in'}
-       
+        value={value}
         name="mobile"
         placeholder="Mobile number" required
+        onChange={(e)=> setValue(e.target.value)}
     />
         
        <FormButton1>Submit</FormButton1>
         <FormLabel >OTP</FormLabel>
         <FormInput name="OTP"
         placeholder="Enter OTP" required
+        onChange={(e)=> setValue(e.target.value)}
         ></FormInput>
         <FormButton>Login</FormButton>
 
