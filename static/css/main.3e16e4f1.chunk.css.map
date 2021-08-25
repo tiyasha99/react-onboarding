@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/App.css"],"names":[],"mappings":"AAAA,EACE,qBAAsB,CACtB,QAAS,CACT,SAAU,CACV,yCAA4C,CAC5C,wBACF","file":"main.3e16e4f1.chunk.css","sourcesContent":["*{\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n  font-family: 'Times New Roman', Times, serif;\n  background-color: #FBF6F5;\n}"]}

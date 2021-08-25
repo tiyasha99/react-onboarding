@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/tiyasha99/react-onboarding.git/static/css/main.3e16e4f1.chunk.css",
+    "main.js": "/tiyasha99/react-onboarding.git/static/js/main.76a9fcd3.chunk.js",
+    "main.js.map": "/tiyasha99/react-onboarding.git/static/js/main.76a9fcd3.chunk.js.map",
+    "runtime-main.js": "/tiyasha99/react-onboarding.git/static/js/runtime-main.a182d806.js",
+    "runtime-main.js.map": "/tiyasha99/react-onboarding.git/static/js/runtime-main.a182d806.js.map",
+    "static/css/2.881d3c7f.chunk.css": "/tiyasha99/react-onboarding.git/static/css/2.881d3c7f.chunk.css",
+    "static/js/2.32a07b5a.chunk.js": "/tiyasha99/react-onboarding.git/static/js/2.32a07b5a.chunk.js",
+    "static/js/2.32a07b5a.chunk.js.map": "/tiyasha99/react-onboarding.git/static/js/2.32a07b5a.chunk.js.map",
+    "index.html": "/tiyasha99/react-onboarding.git/index.html",
+    "static/css/2.881d3c7f.chunk.css.map": "/tiyasha99/react-onboarding.git/static/css/2.881d3c7f.chunk.css.map",
+    "static/css/main.3e16e4f1.chunk.css.map": "/tiyasha99/react-onboarding.git/static/css/main.3e16e4f1.chunk.css.map",
+    "static/js/2.32a07b5a.chunk.js.LICENSE.txt": "/tiyasha99/react-onboarding.git/static/js/2.32a07b5a.chunk.js.LICENSE.txt",
+    "static/media/L.e25098b0.svg": "/tiyasha99/react-onboarding.git/static/media/L.e25098b0.svg",
+    "static/media/R3.032c1615.svg": "/tiyasha99/react-onboarding.git/static/media/R3.032c1615.svg",
+    "static/media/easy.1a488154.svg": "/tiyasha99/react-onboarding.git/static/media/easy.1a488154.svg",
+    "static/media/friend.b071310c.svg": "/tiyasha99/react-onboarding.git/static/media/friend.b071310c.svg",
+    "static/media/fun.4827ff4a.svg": "/tiyasha99/react-onboarding.git/static/media/fun.4827ff4a.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a182d806.js",
+    "static/css/2.881d3c7f.chunk.css",
+    "static/js/2.32a07b5a.chunk.js",
+    "static/css/main.3e16e4f1.chunk.css",
+    "static/js/main.76a9fcd3.chunk.js"
+  ]
+}
