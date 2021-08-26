@@ -28,7 +28,7 @@ height:400px;
 width:400px;
 margin-top:5rem;
 margin-right: 34rem;
-z-index:10;
+z-index:1;
 position:relative;
 
 @media screen and (max-width:480px) {
@@ -43,6 +43,7 @@ width:400px;
 margin-top:12rem;
 z-index:10;
 position:relative;
+border-radius:40px;
 @media screen and (max-width:768px) {
   display:none;
 

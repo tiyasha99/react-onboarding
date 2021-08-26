@@ -1,10 +1,10 @@
 import React from 'react'
-import LoginOTP from  '../Login'
+import Login from  '../Login'
 const LoginPage = () => {
   return (
     <div>
     
-      <LoginOTP/>
+      <Login/>
       
     </div>
   )

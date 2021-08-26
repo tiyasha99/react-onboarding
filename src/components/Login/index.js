@@ -1,116 +1,88 @@
-import React, { useState } from "react";
-import reactDom from "react-dom";
-import PhoneInput from 'react-phone-input-2'
-import 'react-phone-input-2/lib/style.css'
-import firebase from '../firebase';
-import { LoginCard, LoginContainer,FormH1,FormButton, FormInput, FormLabel,FormButton1 } from './LoginElements'
-import { getAuth, RecaptchaVerifier } from "firebase/auth";
-
-
-class LoginOTP extends React.Component{
-  constructor(props){
-    super(props)
-    this.state={
-      phoneNo: '',
-      otp:''
-    }
-    
+import React from 'react'
+import { useState } from 'react'
+import PhoneInput from 'react-phone-number-input'
+import 'react-phone-number-input/style.css'
+import { Form, FormButton, FormButton1, FormH1, FormInput, FormLabel, LoginCard, LoginContainer } from './LoginElements'
+import './phone.css'
+import firebase from 'firebase/app';
+import 'firebase/auth';
+const Login = () => {
+  const [value, setValue] =useState();
+  function handleOnClick(e){
+    e.preventDefault();
+    console.log(Object.values({value}));
+    let phoneNo=Object.values({value});
+    console.log(phoneNo[0]);
   }
-  onHandlePhoneNo(value){
-    console.log(value);
-    console.log('hi');
-    console.log(this.state.phoneNo);
-  }
-  setState(value) {
-    console.log(Object.values(value));
-    const num=Object.values(value);
-    this.onHandlePhoneNo(num);
-
-  }
-  handleClick= () => {
-    console.log('hi');
-    let recaptcha=new firebase.auth.RecaptchaVerifier('recaptcha', {
-      'size': 'invisible'});
-    let number=8389948766;
-    firebase.auth().signInWithPhoneNumber(number,recaptcha).then(function(e){
-      let code=prompt('enter the OTP', '');
-      if(code===null)
-        return;
-      e.confirm(code).then(function(result){
-        console.log(result.user,'user');
-        alert('verified')
-      }).catch((error)=> {
-        console.log(error);
-      })
+  function handleChange(e){
+    const {name,value} =e.target;
+    this.setState({
+      [name]:value
     })
   }
-  configureCaptcha=()=>{
-    const auth = getAuth();
-window.recaptchaVerifier = new RecaptchaVerifier('sign-in-button', {
-  'size': 'invisible',
-  'callback': (response) => {
-    // reCAPTCHA solved, allow signInWithPhoneNumber.
-    this.onSignInSubmit();
-  }
-}, auth);
-  }
-  onSignInSubmit=(e)=>{
-    e.preventDefault();
-    const phoneNumber = '+918389948766';
-    this.configureCaptcha();
-const appVerifier = window.recaptchaVerifier;
-firebase.auth().signInWithPhoneNumber(phoneNumber, appVerifier)
-    .then((confirmationResult) => {
-      // SMS sent. Prompt user to type the code from the message, then sign the
-      // user in with confirmationResult.confirm(code).
-      window.confirmationResult = confirmationResult;
-      console.log('sent');
-      // ...
-    }).catch((error) => {
-      console.log('error');
-      // Error; SMS not sent
-      // ...
+  function configureCaptcha(){
+    window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('sign-in-button', {
+      'size': 'invisible',
+      'callback': (response) => {
+        // reCAPTCHA solved, allow signInWithPhoneNumber.
+        onSignInSubmit();
+        console.log('recaptcha');
+      }
+      
     });
   }
+  function onSignInSubmit(e){
+    e.preventDefault();
     
-  
-  render(){
-    return (
-          
-    <LoginContainer>
-
-    <LoginCard>
-      <FormH1>
-        Login to befriend
-      </FormH1>
-      <FormLabel>Phone</FormLabel>
-      <PhoneInput
-      country={'in'}
-      value={this.state.phoneNo}
-      onChange={phoneNo => this.setState({ phoneNo })}
-      
-      name="mobile"
-      placeholder="Mobile number" required
-  />
-      
-     <FormButton1 type="button" onClick={this.handleClick}>Submit</FormButton1>
-     <div id="sign-in-button"></div>
-      <FormLabel >OTP</FormLabel>
-      <FormInput name="OTP"
-      placeholder="Enter OTP" required
-      
-      ></FormInput>
-      <FormButton>Login</FormButton>
-      
-    </LoginCard>
-
-  </LoginContainer>
-    )
+    configureCaptcha();
+    console.log('hilo');
+    let phoneNo=Object.values({value});
+    console.log(phoneNo[0]);
+    const phoneNumber = phoneNo[0];
+    console.log(`hi + ${phoneNumber}`);
+    
+    const appVerifier = window.recaptchaVerifier;
+    firebase.auth().signInWithPhoneNumber(phoneNumber, appVerifier)
+    .then((confirmationResult) => {
+      window.confirmationResult = confirmationResult;
+      console.log('Otp sent');
+      // ...
+    }).catch((error) => {
+      // Error; SMS not sent
+      // ...
+      console.log('error');
+    });
   }
-}
 
+  
+  
+  return (
+   <LoginContainer>
+     <LoginCard>
+       <Form>
+         <div id="sign-in-button"></div>
+         <FormH1>
+           Login to be friend
+         </FormH1>
+         <FormLabel>Phone</FormLabel>
+         <PhoneInput
+          placeholder="Enter phone number"
+          className="phone"
+          value={value}
+          onChange={setValue}/>
+          <FormButton onClick={onSignInSubmit}>Login</FormButton>
+          <FormLabel>OTP</FormLabel>
+          <FormInput name="otp" onChange={handleChange}></FormInput>
+          <FormButton1>Submit</FormButton1>
+       </Form>
 
+     </LoginCard>
+      
 
+    </LoginContainer>
+    
+  )
+  }
 
+export default Login
 
-export default LoginOTP

@@ -1,14 +1,21 @@
 import styled from "styled-components";
 
 export const LoginContainer= styled.div`
-min-height:692px;
-position:fixed;
+max-height:800px;
+position:relative;
 margin:0 auto;
-left: 33rem;
+position:absolute;
 top:5rem;
 z-index:0;
 overflow:hidden;
 background:#FBF6F5;
+border: 2px solid black;
+border-radius:10px;
+left:28rem;
+@media screen and (max-width: 900px){
+  left:20rem;
+ }
+ 
 `
 export const LoginCard = styled.div`
 background:#fff;
@@ -19,11 +26,12 @@ align-items:center;
 border-radius:10px;
 max-height:800px;
 height: 28rem;
-padding:30px;
+padding:0px;
 box-shadow:0 1px 3px rgba(0,0,0,0,2);
 
 @media screen and (max-wdth: 400px){
  height:80%
+ left:20rem;
 }
 `
 export const LoginIcon = styled.img`
@@ -47,6 +55,10 @@ box shadow: 0 1px 3px rgba(0,0,0,0,0.9);
 @media screen and (max-width:400px){
  padding: 32px 32px;
 }
+@media screen and (max-width:76800px){
+  padding: 32px 32px;
+  
+ }
 `
 export const FormH1= styled.h1`
 margin-bottom:0px;
@@ -87,7 +99,8 @@ font-size:16px;
 color:#fff;
 cursor:pointer;
 position:absolute;
-margin-top:10rem;
+margin-top:0rem;
+right:10rem;
 
 &:hover{
   border:2px solid black;
@@ -104,7 +117,8 @@ font-size:16px;
 color:#fff;
 cursor:pointer;
 position:absolute;
-margin-top:20rem;
+margin-top:3rem;
+left:10rem;
 
 &:hover{
   border:2px solid black;
