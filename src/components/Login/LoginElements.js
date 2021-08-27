@@ -5,15 +5,38 @@ max-height:800px;
 position:relative;
 margin:0 auto;
 position:absolute;
+display:flex;
 top:5rem;
-z-index:0;
+z-index:1;
 overflow:hidden;
 background:#FBF6F5;
 border: 2px solid black;
 border-radius:10px;
-left:28rem;
+left:18rem;
+@media screen and (max-width: 1100px){
+  left:12rem;
+  height:400px;
+ }
 @media screen and (max-width: 900px){
-  left:20rem;
+  left:5rem;
+  height:400px;
+  width:20%;
+  
+  width:80%;
+ }
+ @media screen and (max-width: 900px){
+  left:2rem;
+  height:400px;
+  width:20%;
+  
+  width:80%;
+ }
+ @media screen and (max-wdth: 400px){
+  left:-3rem;
+  height:400px;
+  
+  width:30%;
+  
  }
  
 `
@@ -30,16 +53,23 @@ padding:0px;
 box-shadow:0 1px 3px rgba(0,0,0,0,2);
 
 @media screen and (max-wdth: 400px){
- height:80%
- left:20rem;
+ height:50%
+ left:8rem;
 }
 `
-export const LoginIcon = styled.img`
-height:160px;
-width:160px;
-margin-bottom:10px;
-border-radius:50%;
+
+export const LoginIcon2 = styled.img`
+height:450px;
+width:400px;
+z-index:20;
+margin-top:0rem;
+background:#fff;
+@media screen and (max-wdth: 400px){
+  display:none;
+ }
+
 `
+
 
 export const Form= styled.form`
 background:#fff;
@@ -66,8 +96,12 @@ color:#000;
 font-size:2rem;
 font-weight:400;
 text-align:center;
+padding-bottom:6rem;
 background:#fff;
-
+@media screen and (max-width:400px){
+  font-size:1.5rem;
+  right: 2rem;
+ }
 `;
 export const FormLabel=styled.div`
 margin-top:60px;
@@ -76,6 +110,25 @@ font-size:1rem;
 color:#333;
 background:#fff;
 margin-right:14rem;
+@media screen and (max-width:400px){
+  font-size:0.8rem;
+ }
+`;
+export const FormLabel1=styled.div`
+margin-top:80px;
+margin-bottom:0;
+font-size:1rem;
+color:#333;
+top:2rem;
+width:2rem;
+background:#fff;
+left:-0.5rem;
+padding:0;
+z-index:0;
+position:relative;
+@media screen and (max-width:400px){
+  font-size:0.8rem;
+ }
 `;
 
 
@@ -86,38 +139,29 @@ padding: 16px 16px;
 margin-bottom:32px;
 border: 1px solid #555;
 border-radius: 4px;
-width:100%;
+width:89.5%;
 height:2.5rem;
 background:#fff;
+margin-left:2rem;
+
+@media screen and (max-width:400px){
+  width:88%;
+  margin-bottom:22px;
+ }
 `
 export const FormButton=styled.button`
 background:#F9A826;
 padding:10px;
+padding-right:18px;
+padding-left:18px;
 border: none;
 border-radius:10px;
 font-size:16px;
 color:#fff;
 cursor:pointer;
 position:absolute;
-margin-top:0rem;
-right:10rem;
+margin-top:0.5rem;
 
-&:hover{
-  border:2px solid black;
-  background:white;
-  color:#000;
-}
-`;
-export const FormButton1=styled.button`
-background:#F9A826;
-padding:10px;
-border: none;
-border-radius:10px;
-font-size:16px;
-color:#fff;
-cursor:pointer;
-position:absolute;
-margin-top:3rem;
 left:10rem;
 
 &:hover{
@@ -125,4 +169,34 @@ left:10rem;
   background:white;
   color:#000;
 }
+
+@media screen and (max-width:400px){
+  font-size:0.8rem;
+  left:8rem;
+ }
+`;
+export const FormButton1=styled.button`
+background:#F9A826;
+padding:10px;
+padding-right:20px;
+padding-left:20px;
+border: none;
+border-radius:10px;
+font-size:16px;
+color:#fff;
+cursor:pointer;
+position:absolute;
+margin-top:3.5rem;
+left: 10.2rem;
+
+&:hover{
+  border:2px solid black;
+  background:white;
+  color:#000;
+}
+@media screen and (max-width:500px){
+  bottom:.5rem;
+  left: 10rem;
+  
+ }
 `;

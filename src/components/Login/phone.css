@@ -1,6 +1,30 @@
 .phone{
   width:20rem;
-  height:2rem;
   background:white;
-  border-radius: 10px;
+  
+  
 }
+.PhoneInputCountry{
+  background-color: white;
+  margin-right:0.4rem ;
+}
+input.PhoneInputInput{
+  height:2.5rem;
+  padding:16px;
+  border-radius: 5px;
+  border: 1px solid #555;
+  background-color: white;
+}
+select.PhoneInputCountrySelect select{
+  padding-right: 1rem;
+
+  
+}
+@media screen and (max-width:400px){
+  .phone{
+    width:16rem;
+  }
+  
+ }
+
+ 

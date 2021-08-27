@@ -10,10 +10,17 @@ import { NavbarContainer,
   NavBtn,
   NavBtnLink
 } from './NavbarElements'
+import {useHistory} from "react-router-dom";
 
 
 
 const Navbar = ({toggle}) => {
+
+  let history = useHistory();
+  function onClickHandle()
+  {
+    history.push('/Community');
+  }
   return (
    <>
     <Nav>
@@ -29,7 +36,7 @@ const Navbar = ({toggle}) => {
             <NavLinks to="home">Home</NavLinks>
           </NavItem>
           <NavItem>
-            <NavLinks to="community">Community</NavLinks>
+            <NavLinks to="/Community" onClick={onClickHandle}>Community</NavLinks>
           </NavItem>
           <NavItem>
             <NavLinks to="aboutUs">About Us</NavLinks>

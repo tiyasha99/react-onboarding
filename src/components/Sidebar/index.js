@@ -1,7 +1,12 @@
 import React from 'react';
 import { SidebarContainer, Icon, CloseIcon, SidebarLink, SidebarWrapper, SidebarMenu, SideBtnWrap, SidebarRoute } from './SidebarElements';
-
+import {useHistory} from "react-router-dom";
 const Sidebar = ({isOpen, toggle}) => {
+  let history = useHistory();
+  function onClickHandle()
+  {
+    history.push('/Community');
+  }
   return (
     <SidebarContainer isOpen={isOpen} onClick={toggle}>
       <Icon onClick={toggle}>
@@ -12,7 +17,7 @@ const Sidebar = ({isOpen, toggle}) => {
           <SidebarLink to="home" onClick={toggle}>
             Home
           </SidebarLink>
-          <SidebarLink to="community" onClick={toggle}>
+          <SidebarLink to="/Community" onClick={onClickHandle}>
             Community
           </SidebarLink>
           <SidebarLink to="aboutUs" onClick={toggle}>
