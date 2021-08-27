@@ -15,27 +15,34 @@ border-radius:10px;
 left:18rem;
 @media screen and (max-width: 1100px){
   left:12rem;
-  height:400px;
+  height:auto;
  }
 @media screen and (max-width: 900px){
   left:5rem;
-  height:400px;
+  height:auto;
   width:20%;
   
   width:80%;
  }
  @media screen and (max-width: 900px){
   left:2rem;
-  height:400px;
+  height:auto;
   width:20%;
   
   width:80%;
  }
  @media screen and (max-wdth: 400px){
   left:-3rem;
-  height:400px;
+  height:auto;
   
   width:30%;
+  
+ }
+ @media screen and (max-wdth: 500px){
+  left:-3rem;
+  height:400px;
+  
+  width:80%;
   
  }
  
@@ -56,6 +63,10 @@ box-shadow:0 1px 3px rgba(0,0,0,0,2);
  height:50%
  left:8rem;
 }
+@media screen and (max-wdth: 400px){
+  height:50%
+  left:5rem;
+ }
 `
 
 export const LoginIcon2 = styled.img`
@@ -102,6 +113,11 @@ background:#fff;
   font-size:1.5rem;
   right: 2rem;
  }
+ @media screen and (max-width:500px){
+  font-size:2rem;
+  margin-right:3rem;
+  
+ }
 `;
 export const FormLabel=styled.div`
 margin-top:60px;
@@ -145,8 +161,12 @@ background:#fff;
 margin-left:2rem;
 
 @media screen and (max-width:400px){
-  width:88%;
+  width:89.5%;
   margin-bottom:22px;
+ }
+ @media screen and (max-width:500px){
+  width:15rem;
+  
  }
 `
 export const FormButton=styled.button`
@@ -174,6 +194,10 @@ left:10rem;
   font-size:0.8rem;
   left:8rem;
  }
+ @media screen and (max-width:500px){
+  font-size:0.8rem;
+  left:9rem;
+ }
 `;
 export const FormButton1=styled.button`
 background:#F9A826;
@@ -196,7 +220,14 @@ left: 10.2rem;
 }
 @media screen and (max-width:500px){
   bottom:.5rem;
-  left: 10rem;
+  left: 9rem;
+  font-size:0.8rem;
+  
+ }
+ @media screen and (max-width:400px){
+  bottom:.5rem;
+  left: 6rem;
+  font-size:0.8rem;
   
  }
 `;

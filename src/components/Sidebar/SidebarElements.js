@@ -12,7 +12,7 @@ background: #0d0d0d;
 display: grid;
 align-items:center;
 top: 0;
-left:0;
+left:-1rem;
 transition: 0.3s ease-in-out;
 opacity: ${({ isOpen}) => (isOpen ? '100%': '0')};
 top: ${({ isOpen}) => (isOpen ? '0': '-100%')};
@@ -20,15 +20,17 @@ top: ${({ isOpen}) => (isOpen ? '0': '-100%')};
 ` 
 export const CloseIcon = styled(FaTimes)
 `
-color: #333;
+color:#F9A826;
+background:#111;
 
 `
 
 export const Icon = styled.div `
 position: absolute;
 top: 1.2rem;
-right: 1.5rem;
+right: 3rem;
 background: transparent;
+color:#F9A826;
 font-size:1.5rem;
 cursor: pointer;
 outline:none;
@@ -69,6 +71,17 @@ export const SidebarLink = styled(LinkS)`
 export const SideBtnWrap = styled.div`
   display:flex;
   justify-content:center;
+  top:25rem;
+  left:8.5rem;
+  position:absolute;
+  @media screen and (max-width:500px){
+    left:10.5rem;
+    
+   }
+   @media screen and (max-width:900px){
+    left:20.5rem;
+    
+   }
 
 `
 export const SidebarRoute = styled(LinkR)`

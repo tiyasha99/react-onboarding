@@ -104,7 +104,8 @@ position:absolute;
 @media screen and (max-width:480px) {
   width: 90px;
   margin-left:12rem;
-  top:6.5rem;
+  top:7rem;
+  height:.2rem;
   border-bottom: 10px solid #F9A826;
 }
 `
@@ -124,6 +125,10 @@ export const HomeP =styled.p`
 @media screen and (max-width:480px) {
   font-size:14px;
   max-width:400px;
+}
+@media screen and (max-width:350px) {
+  font-size:14px;
+  max-width:340px;
 }
 
 `

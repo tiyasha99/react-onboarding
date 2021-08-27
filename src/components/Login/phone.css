@@ -1,12 +1,12 @@
 .phone{
   width:20rem;
   background:white;
-  
+  left:-5rem;
   
 }
 .PhoneInputCountry{
   background-color: white;
-  margin-right:0.4rem ;
+ 
 }
 input.PhoneInputInput{
   height:2.5rem;
@@ -15,16 +15,37 @@ input.PhoneInputInput{
   border: 1px solid #555;
   background-color: white;
 }
-select.PhoneInputCountrySelect select{
-  padding-right: 1rem;
 
-  
-}
-@media screen and (max-width:400px){
+@media screen and (max-width:300px){
   .phone{
-    width:16rem;
+    width:2rem;
+  }
+ 
+ }
+ @media screen and (max-width:500px){
+  .phone{
+    width:18rem;
+    left:-5rem;
+  }
+  .PhoneInputCountry{
+    background-color: white;
+    margin-right:0rem ;
   }
   
+  
+  
  }
-
+ @media screen and (max-width:500px){
+  .phone{
+    width:18rem;
+    left:-5rem;
+  }
+  .PhoneInputCountry{
+    background-color: white;
+    margin-right:0rem ;
+  }
+  
+  
+  
+ }
  
